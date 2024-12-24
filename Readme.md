@@ -10,16 +10,15 @@ WebSockets create a persistent connection that can last indefinitely, allowing t
 
 WebSockets address many limitations of the HTTP protocol, which requires multiple HTTP calls and TCP connections for bidirectional communication. WebSockets provide an alternative to the continuous polling that HTTP requires.
 
-
-
 # typescript
+
 what is ts-node packages---
 this packages helps to transpile and execute the typescript code to javascript
-
-
 
 # working
 
 import {Server} from 'socket.io'
 
-<p>socket.io is configured in both frontend and backend. socket from the frontend send the get request or for the connection of websocket. if the websocket accept the request or we can say send the handshake response then websocket connection is setuped. </p>
+<p>socket.io is configured in both frontend and backend. socket from the frontend send the get request or for the connection of websocket. if the websocket accept the request or we can say send the handshake response then websocket connection is done. </p>
+
+![alt text](websocket1.png)
