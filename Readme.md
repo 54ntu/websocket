@@ -22,3 +22,17 @@ this packages helps to transpile and execute the typescript code to javascript
 <p>socket.io is configured in both frontend and backend. socket from the frontend send the get request or for the connection of websocket. if the websocket accept the request or we can say send the handshake response then websocket connection is done. </p>
 
 ![alt text](websocket1.png)
+
+
+# methods in websocket
+post --on
+get -- emit
+
+``` javascript
+
+io.on("connection",(socket)=>{
+    
+    console.log('someone connected (client)')
+})
+
+```
