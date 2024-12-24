@@ -3,7 +3,7 @@ import { ITodo, Status } from "./todoTypes";
 
 const todoSchema = new mongoose.Schema<ITodo>({
     task: String,
-    deadline: String,
+    deadLine: String,
     status: {
         type: String,
         enum: [Status.completed, Status.pending],
@@ -12,5 +12,5 @@ const todoSchema = new mongoose.Schema<ITodo>({
 })
 
 
-const Todo = mongoose.model("Todo", todoSchema)
-export default Todo;
+const TodoModel = mongoose.model("TodoModel", todoSchema)
+export default TodoModel;

@@ -8,35 +8,32 @@ import { Server } from 'socket.io'
 //get--emit
 //request --socket
 //api--event    
-
+let io: Server;
 connectdb()
-    .then(() => {
+function serverConnect() {
+    try {
         const server = app.listen(envConfig.port, () => {
             console.log(`server is listening at port ${envConfig.port}`)
         })
 
-        const io = new Server(server)
+        io = new Server(server)
+    } catch (error) {
+        console.log(`error while starting server ${error}`)
 
-        //if we use reactjs,next js frontend then we need to configure the cors as well
-
-        // const io=    new Server(server,{
-        //     cors:{
-        //         origin:"http://localhost:5173"
-        //     }
-        //         })
-
-        io.on("connection", (socket) => {
-            // console.log(socket.id)
-            socket.on('haha', (data) => {
-                console.log(data)
-                socket.emit("suniraxu", {
-                    message: "data receive gare hoiiii...!!"
-                })
-            })
-            console.log("someone connected(client)")
-        })
-    })
-    .catch(() => {
-        console.log("error while connecting datbase")
     }
-    )
+
+}
+
+serverConnect();
+
+function getSocketIo() {
+    if (!io) {
+        throw new Error("socketio is not defined or available..!!")
+
+    }
+
+    return io;
+}
+
+
+export { getSocketIo };

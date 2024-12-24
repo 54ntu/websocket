@@ -6,6 +6,6 @@ export enum Status {
 
 export interface ITodo {
     task: string,
-    deadline: string,
+    deadLine: string,
     status: Status
 }
