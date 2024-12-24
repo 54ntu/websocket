@@ -4,7 +4,8 @@
   "description": "WebSocket is a computer communications protocol that allows for two-way communication between a client and server over a single connection.",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon server.ts"
   },
   "author": "",
   "license": "ISC",
