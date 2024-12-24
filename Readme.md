@@ -12,4 +12,4 @@ WebSockets address many limitations of the HTTP protocol, which requires multipl
 
 # working of an web application
 
-<img src="./websocket.png>
+![Alt text](relative/path/to/websocket.png)
