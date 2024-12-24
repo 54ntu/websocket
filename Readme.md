@@ -15,3 +15,11 @@ WebSockets address many limitations of the HTTP protocol, which requires multipl
 # typescript
 what is ts-node packages---
 this packages helps to transpile and execute the typescript code to javascript
+
+
+
+# working
+
+import {Server} from 'socket.io'
+
+<p>socket.io is configured in both frontend and backend. socket from the frontend send the get request or for the connection of websocket. if the websocket accept the request or we can say send the handshake response then websocket connection is setuped. </p>
