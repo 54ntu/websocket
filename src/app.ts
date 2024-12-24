@@ -1,8 +1,15 @@
-import express from "express";
+import express, { Request, Response } from "express";
+import path from "path";
 const app = express();
 import("../src/todo/todoController")
 
 
+
+app.set("views", path.join(__dirname, "views"))
+app.set("view engine", "ejs") //this one is to tell that we are going to use ejs template for frontend
+app.get("/", (req: Request, res: Response) => {
+    res.render("home.ejs")
+})
 
 
 export default app;

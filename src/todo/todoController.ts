@@ -74,7 +74,7 @@ class Todo {
                 });
                 return;
             }
-            const todos = await TodoModel.find()
+            const todos = await TodoModel.find({ status: Status.pending })
             socket.emit('todo-upated', {
                 status: "success",
                 data: todos
@@ -93,7 +93,7 @@ class Todo {
 
     private async handleFetchTodo(socket: Socket) {
         try {
-            const todos = await TodoModel.find()
+            const todos = await TodoModel.find({ status: Status.pending })
             console.log(todos)
             socket.emit("todo-response", {
                 status: 'success',
@@ -128,7 +128,7 @@ class Todo {
                     message: "error while updating the todos"
                 })
             }
-            const todos = await TodoModel.find()
+            const todos = await TodoModel.find({ status: Status.pending })
             socket.emit("todo-updated", {
                 status: "success",
                 message: "todo updated successfully...!!!",
