@@ -17,7 +17,7 @@ this packages helps to transpile and execute the typescript code to javascript
 
 # working
 
-import {Server} from 'socket.io'
+<h1>import {Server} from 'socket.io'</h1>
 
 <p>socket.io is configured in both frontend and backend. socket from the frontend send the get request or for the connection of websocket. if the websocket accept the request or we can say send the handshake response then websocket connection is done. </p>
 
