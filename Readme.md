@@ -23,16 +23,19 @@ this packages helps to transpile and execute the typescript code to javascript
 
 ![alt text](websocket1.png)
 
-
 # methods in websocket
+
 post --on
 get -- emit
 
-``` javascript
-
-io.on("connection",(socket)=>{
-    
-    console.log('someone connected (client)')
-})
-
+```javascript
+io.on("connection", (socket) => {
+  socket.on("data", (data) => {
+    console.log(data);
+    socket.emit("suniraxu", {
+      message: "data received from frontend",
+    });
+  });
+  console.log("someone connected (client)");
+});
 ```
