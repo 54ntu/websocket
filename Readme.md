@@ -10,6 +10,8 @@ WebSockets create a persistent connection that can last indefinitely, allowing t
 
 WebSockets address many limitations of the HTTP protocol, which requires multiple HTTP calls and TCP connections for bidirectional communication. WebSockets provide an alternative to the continuous polling that HTTP requires.
 
-# working of an web application
 
-![Alt text](./images/websocket.png)
+
+# typescript
+what is ts-node packages---
+this packages helps to transpile and execute the typescript code to javascript
