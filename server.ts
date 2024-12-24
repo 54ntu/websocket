@@ -1,14 +1,17 @@
 import 'dotenv/config'
 import app from "./src/app";
 import envConfig from './src/config/config';
+import connectdb from './src/config/dbconfig';
 
 
-const startServer = () => {
-    const port = envConfig.port || 3000
-    app.listen(port, () => {
-        console.log('app is listening at port ', port)
+
+connectdb()
+    .then(() => {
+        app.listen(envConfig.port, () => {
+            console.log(`server is listening at port ${envConfig.port}`)
+        })
     })
-}
-
-
-startServer()
+    .catch(() => {
+        console.log("error while connecting datbase")
+    }
+    )
